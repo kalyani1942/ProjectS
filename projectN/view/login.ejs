@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/public/assets/style.css" />
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Login To Your Account</title>
+        <style>
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #04aa6d;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 45px;
+            }
+            .container {
+                padding: 16px;
+                width: 350px;
+
+                margin-left: 490px;
+                border: 1px solid black;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+            img.avatar {
+                width: 20%;
+                border-radius: 50%;
+            }
+            h2 {
+                text-align: center;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgba(14, 13, 13, 0.479);
+            }
+            .card-img-top {
+                width: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Login your Account</h2>
+        <form action="auth" method="POST">
+            <div class="imgcontainer">
+                <img class="card-img-top" src="./images/Images/194938.png" alt="avtar" class="avatar" />
+            </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="user_name" required id="input" />
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="user_psw" required id="psw" />
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </body>
+</html>

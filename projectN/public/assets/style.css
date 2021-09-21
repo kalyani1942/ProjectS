@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/Images/Maldives_travel_guide.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+.header h1 {
+    margin: 50px;
+    padding-top: 90px;
+    padding-bottom: 0;
+    font-size: 55px;
+    color: white;
+}
+.login_btn {
+    border: 2px solid #fff;
+    border-radius: 50px;
+    width: 100px;
+    outline: none !important;
+    background: transparent;
+    padding: 8px 0;
+    float: right;
+    color: #fff;
+}
+ul {
+    float: left;
+    list-style-type: none;
+    margin-top: 500px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0px 5px;
+    background: transparent;
+    font-size: large;
+}
+ul li a:hover,
+ul li a:active {
+    border-bottom: 2px solid white;
+}
+.features {
+    padding: 0px;
+}
+.features h1 {
+    text-align: center;
+}
+.feature-img img {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0px 5px;
+    background: transparent;
+}
+.features {
+    padding: 0px;
+}
+.features h1 {
+    text-align: center;
+}
+.feature-img img {
+    width: 100%;
+    position: absolute;
+}
+.destination-name {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.1);
+    right: 20px;
+    top: -25px;
+}
+.destination-name p {
+    color: black;
+    padding: 10px;
+    float: left;
+    top: -2px;
+    right: 0;
+    position: absolute;
+    display: flex;
+}
+.feature-box {
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+    margin-bottom: 30px;
+}
+/*holiday*/
+.holiday {
+    padding: 0 0 100px 0;
+}
+.kashamir-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/Images/Kashmir_6.jpg);
+    width: 100%;
+    height: 30vh;
+}
+.kashamir-1 h4 {
+    color: white;
+    text-align: center;
+}
+.kashamir-1 h6 {
+    color: white;
+    text-align: right;
+}
+.holiday-img img {
+    width: 100%;
+    position: relative;
+}
+.price {
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-weight: 600;
+    border-radius: 50%;
+    background-color: #f77811;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+.holiday-img {
+    position: relative;
+    opacity: 0.9;
+}
+.holiday-img:hover {
+    opacity: 1;
+    border: 1px solid darkcyan;
+}
+.price p {
+    color: rgb(255, 255, 255);
+}
+h4 {
+    text-align: left;
+    color: black;
+    font-size: 16pc;
+}
+h4 i {
+    font-family: cursive;
+}
+.para {
+    color: rgb(35, 219, 35);
+    text-align: left;
+    font-size: inherit;
+}
+.rating {
+    padding: 3px;
+    float: right;
+    position: absolute;
+    background: white;
+    bottom: -1px;
+    right: 0;
+}
+.holiday .fa {
+    font-size: 15px;
+    color: #f77811;
+}
+.paradise {
+    background-color: rgb(1, 13, 32);
+    width: 100%;
+    height: 10vh;
+}
+.paradise h3 {
+    color: white;
+}
+.all {
+    background-color: rgba(1, 13, 32, 0.281);
+    width: 100%;
+    height: 10vh;
+}
+.all ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0px 5px;
+    background: transparent;
+}
+.ctegory {
+    float: right;
+    color: white;
+    top: 0;
+}
+.holiday-details {
+    padding: 20px;
+    text-align: justify;
+}
+.holiday-details h4 {
+    font-weight: 600;
+    margin-top: 20px;
+}
+.holiday-details p {
+    color: black;
+}
+.holiday-details .fa {
+    margin-right: 5px;
+}
+.holiday-box {
+    box-shadow: 0 0 10 rgba(37, 73, 214, 0.18);
+    margin-left: 20px;
+}
+.destination_box {
+    background: rgb(1, 13, 32);
+}
+.btn {
+    text-align: center;
+    margin-left: 500px;
+}
+.destination_box .form-inline {
+    margin-left: 10px;
+}
+.destination_box .form-inline input {
+    width: 95%;
+}
+.destination_box .form-inline label {
+    float: left;
+}
+.card {
+    width: 400px;
+}
+/*holiday_package*/
+.holiday_package h3 {
+    color: rgb(46, 80, 231);
+    text-align: center;
+}
+.holiday_package h5 {
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+}
+.holiday_package h4 {
+    color: rgb(39, 220, 233);
+    margin-left: 20px;
+}
+.Details h6 {
+    color: white;
+}
+hr.new {
+    border: 1px solid black;
+}
+
+.plan_2 ul li {
+    display: list-item;
+    color: blue;
+}
+.plan_2 {
+    border: 1px solid blanchedalmond;
+}
+.Plan_b {
+    width: 100%;
+    height: 25vh;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.Plan_b ul li {
+    color: blanchedalmond;
+}
+.Plan_c ul li {
+    display: inline;
+    margin-left: 25px;
+}
+.details h6 {
+    float: left;
+    color: white;
+}
+/*Gallery*/
+.gallery {
+    padding: 10px 0;
+}
+.gallery h1 {
+    color: blanchedalmond;
+    text-align: center;
+}
+.gallery-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#form {
+    background-color: rgba(0, 0, 0);
+    height: 400px;
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    opacity: 0.7;
+}
+/*HotelBooking*/
+.hotel {
+    background-image: linear-gradient(rgba(231, 150, 150, 0.6), rgba(0, 0, 0, 0.6)), url(./Images/hotel-1.jpg);
+    background-position: center;
+}
+#first-group {
+    width: 400px;
+    margin-top: 38px;
+    position: absolute;
+}
+#content {
+    border: 1px solid white;
+    margin: 10px;
+    margin-left: 8px;
+    padding: 5px;
+}
+#content #input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 8px;
+}
+
+.hotel-booking .fa {
+    display: inline-block;
+    color: red;
+    border-right: 1px solid white;
+    padding: 8px;
+    margin-left: 8px;
+}
+#second-group {
+    width: 400px;
+    margin-top: 55px;
+    margin-left: 400px;
+}
+#submit-btn {
+    margin-top: 30px;
+    margin-left: 710px;
+    color: white;
+    background: transparent;
+    width: 150px;
+    border: 1px solid rgb(90, 89, 89);
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+    box-shadow: 1px;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} /*
+#submit-btn {
+    background: linear-gradient(rgba(7, 7, 139, 0.404), rgba(0, 0, 0));
+    margin-left: 870px;
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}*/
+.hotel-name {
+    font-size: 20px;
+    color: black;
+}
+.heading {
+    display: block;
+    color: black;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.sub-heading {
+    color: black;
+    font-size: 1.7rem;
+    font-family: "Courgette", cursive;
+    font-weight: 300;
+}
+.hotel-image {
+    width: 60%;
+    height: 60%;
+}
+.dots {
+    float: left;
+}
+.section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+/* Flight-Booking*/
+.Flight-booking {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./Images/flight_2.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+} /*
+.booking-form-box {
+    max-width: 380px;
+    border: 1px solid #ced4da;
+    margin: 10% auto 0;
+}
+.radio-btn {
+    margin: 0 20px;
+}
+.radio-btn .btn {
+    margin: 20px 10px 20px 0;
+    box-shadow: none;
+}
+.radio-btn .btn::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    top: -2px;
+    left: -1px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    border: 3px solid #fff;
+    visibility: visible;
+    border-radius: 50%;
+}
+.radio-btn span {
+    color: #fff;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.booking-form {
+    padding: 0 20px 20px;
+}
+.booking-form label {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+input::placeholder {
+    color: #fff !important;
+}
+.input-grp {
+    width: 151px;
+    display: inline-block;
+}
+/*Footer*/
+footer {
+    background: black;
+    color: white;
+    height: 15vh;
+    position: absolute;
+    background: black;
+    left: 0;
+    right: 0;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: white;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li {
+    margin: 0 10px;
+}
+.socials a {
+    text-decoration: none;
+    color: white;
+}
+.socials a i {
+    font-size: 1.1rem;
+    transition: 4s ease;
+}
+.socials a:hover i {
+    color: aqua;
+}
+.footer-bottom {
+    background: black;
+    width: 150vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}

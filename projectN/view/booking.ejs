@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Book-Now</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css " />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background-color: grayga;
+            }
+            .packageProgressStatus {
+                display: flex;
+                height: 5px;
+                background: #ffffff;
+                border-radius: 8px;
+                position: relative;
+                float: right;
+            }
+            .reviewPackageHeader {
+                width: 100%;
+                height: 88px;
+                background: #0a223d;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .packageProgressStatus li.completed .numbering::before {
+                content: "";
+                display: block;
+                width: 4px;
+                height: 7px;
+                border: solid #fff;
+                border-width: 0 1px 1px 0;
+                transform: rotate(45deg);
+                position: absolute;
+                left: 5px;
+                top: 2px;
+            }
+            .packageProgressStatus .numbering {
+                width: 13px;
+                height: 13px;
+                font-size: 10px;
+                background: #fff;
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+                top: -18px;
+                line-height: 13px;
+            }
+            .packageProgressStatus li {
+                flex: 1;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+            .packageProgressStatus li.completed .numbering {
+                background: #26b5a9;
+                text-indent: -999999px;
+            }
+            .progress {
+                height: 5px;
+                background: #26b5a9;
+                content: "";
+                border-radius: 8px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-35%);
+            }
+            .container {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            .whiteText {
+                color: #fff;
+            }
+            .latoBold {
+                font-weight: 700;
+            }
+            element.style {
+                width: 135px;
+                right: 195px;
+            }
+            .greyText {
+                color: white;
+            }
+            .destinationsNight li {
+                display: inline-block;
+                margin-right: 5px;
+                list-style: square;
+            }
+            .left-table {
+                margin-left: 10px;
+                width: 60%;
+                float: left;
+            }
+            .right-table {
+                width: 30%;
+                float: right;
+            }
+            .col-25 {
+                margin-top: 6px;
+                margin-left: 50px;
+            }
+
+            .col-75 {
+                margin-top: 12px;
+                margin-left: 50px;
+            }
+            .col-25 span {
+                color: rgb(163, 163, 163);
+            }
+            .rooms {
+                border: 1px solid grey;
+                width: 40vw;
+                height: 70vh;
+                margin-left: 50px;
+            }
+            .rooms h6 {
+                margin-left: 10px;
+            }
+            input[type="text"],
+            textarea {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                resize: vertical;
+            }
+            input[type="submit"] {
+                background-color: #4caf50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                padding: 12px 20px;
+                margin-left: 400px;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            .Onlinepaym {
+                border: grey 1px solid;
+                height: 70vh;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+            .badge {
+                margin-left: 70px;
+            }
+            .grdTotal {
+                height: 10vh;
+                background-color: aqua;
+                margin-top: 20px;
+            }
+            .grdTotal span {
+                text-align: center;
+            }
+            .st {
+                background-color: rgb(241, 233, 233);
+            }
+            .subtotal {
+                height: 10vh;
+                margin-top: 10px;
+            }
+            .total {
+                margin-top: 10px;
+                height: 10vh;
+            }
+            .cuopn {
+                border: gray 1px solid;
+            }
+            #submit-btn {
+                margin-top: 10px;
+                color: black;
+                width: 150px;
+                border: 1px solid rgb(90, 89, 89);
+                border-radius: 5px;
+                outline: none;
+                font-size: 20px;
+                box-shadow: 1px;
+                float: right;
+                margin-right: 100px;
+                background-image: linear-gradient(103deg, #53b2fe, #065af3);
+            }
+            footer {
+                background: black;
+                color: white;
+                height: 15vh;
+                position: absolute;
+                left: 0;
+                right: 0;
+                font-family: "Open Sans";
+                padding-top: 10px;
+                color: white;
+                margin-top: 150px;
+            }
+            .footer-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-content p {
+                max-width: 500px;
+                margin: 10px auto;
+                line-height: 28px;
+                font-size: 14px;
+            }
+            .socials {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0 3rem 0;
+            }
+            .socials li {
+                margin: 0 10px;
+            }
+            .socials a {
+                text-decoration: none;
+                color: white;
+            }
+            .socials a i {
+                font-size: 1.1rem;
+                transition: 4s ease;
+            }
+            .socials a:hover i {
+                color: aqua;
+            }
+            .footer-bottom {
+                background: black;
+                width: 150vw;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .footer-bottom p {
+                font-size: 14px;
+                word-spacing: 2px;
+                text-transform: capitalize;
+                text-align: center;
+            }
+            .footer-bottom span {
+                text-transform: uppercase;
+                opacity: 0.4;
+                font-weight: 200;
+            }
+            #Book-Now {
+                width: 100%;
+                min-height: 100vh;
+                background-color: #ddd;
+            }
+            .btn {
+                background: rgba(255, 0, 0, 0.712);
+                width: 25%;
+                margin-left: 10px;
+                border-radius: 20px;
+                margin-top: 12px;
+            }
+            .btn-c {
+                background: green;
+                margin-left: 350px;
+                border-radius: 20px;
+                width: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="Book-Now">
+            <div class="reviewPackageHeader">
+                <div class="container">
+                    <div class="makeFlex hrtlCenter spaceBetween relative">
+                        <h4 class="font22 latoBold whiteText">Review Package</h4>
+                        <ul class="packageProgressStatus" style="width: 330px">
+                            <li class="completed"><span class="numbering">1</span><span class="greyText font12">Package Details</span></li>
+                            <li class=""><span class="numbering">2</span> <span class="greyText font12">Review</span></li>
+                            <li class=""><span class="numbering">3</span> <span class="greyText font12">Make Payment</span></li>
+                        </ul>
+                        <span class="progress" style="width: 135px; right: 195px"></span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="sider">
+                <div class="left-table">
+                    <div>
+                        <h4 style="color: black">6N Kashmir Holiday Flight Inclusive Deal</h4>
+                        <ul class="destinationsNight">
+                            <li>1N Shrinagr</li>
+                            <li>1N Shrinagr</li>
+                            <li>1N Shrinagr</li>
+                        </ul>
+                    </div>
+                    <div class="dates">
+                        <p>Dates:2Aug2021-8Aug2021/From:Pune</p>
+                        <p style="word-spacing: 10%">Inclusions:<a href="#">Flight</a>/<a href="#">Hotels</a>/<a href="#">Transfer</a></p>
+                        <h5>Traveller Information</h5>
+                        <p>2Adults</p>
+                    </div>
+                    <div class="input-grp">
+                        <h6>Room-1</h6>
+                        <form class="rooms" action="/bookings" method="POST">
+                            <div class="row">
+                                <div class="col-25"><label for="fname">Adults-1:</label><br /><span>(age <18)</span></div>
+                                <div class="col-75">
+                                    <input type="number" id="fname" name="fname" placeholder="Enter The Count.." />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25"><label for="lname">Adults-2:</label><br /><span>(age >18)</span></div>
+                                <div class="col-75">
+                                    <input type="number" id="lname" name="lname" placeholder="Enter The Count.." />
+                                </div>
+                            </div>
+                            <h6><b>Please enter contact details</b></h6>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="email">Email:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="email" id="email" name="email" placeholder="Enter Vaild Emial Id.." />
+                                </div>
+                            </div>
+                            <h6><b>Mobile No *</b></h6>
+                            <div class="row">
+                                <div class="col-25"><label for="mobile ni">Mobile no:</label></div>
+                                <div class="col-75"><input type="text" id="mbl" name="mbl" placeholder="+91 Mobile no" /></div>
+                            </div>
+                            <h6><b>Special Request</b></h6>
+                            <div class="col-75">
+                                <input type="text" id="spl" name="spl" placeholder="Enter a Specail Remarks" />
+                            </div>
+                            <br />
+                            <div class="row">
+                                <a href="/booking"> <button type="submit" class="btn-c">Confirm</button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br />
+                <div class="right-table">
+                    <div class="payment">
+                        <div class="grdTotal">
+                            <p style="margin-left: 50px">Grand Total</p>
+                            <h6><span style="margin-left: 50px">INR 61,856</span><span class="badge badge-danger">30%OFF</span></h6>
+                        </div>
+                        <div class="st">
+                            <div class="subtotal" style="background-color: white">
+                                <span>Rs;41,252*2px</span><span style="float: right; margin-right: 10px">Rs:88,289</span>
+                            </div>
+                            <div class="total"><span>Total Basic Cost</span><span style="float: right">Rs:88,289</span></div>
+                        </div>
+                        <div class="st">
+                            <span>INDIAHOLIDAYS</span><span style="float: right">-29,968</span>
+                            <p style="color: gray"><small> (applied successfully)</small></p>
+                        </div>
+                        <div class="st">
+                            <span>GST(%)</span><span style="float: right">2,916</span> <br />
+                            <hr />
+                            <h6><span>GrandTotal</span><span style="float: right">INR:61.289</span></h6>
+
+                            <a href="payment"><button type="submit" value="submit" id="submit-btn">Book Now</button></a>
+                        </div>
+                        <br />
+
+                        <div class="bt">
+                            <a href="/holiday"><button type="submit" class="btn">Cancle</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear" style="clear: both"></div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <ul class="socials">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+                <div class="footer-bottom">
+                    <p style="color: white">Copyright &copy;2021 AmberSoft Designed by <span>Team3</span></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

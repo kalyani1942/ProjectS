@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/assets/astyle.css" />
+        <title>Edit-Page</title>
+        <style>
+            body {
+                background-color: rgba(169, 169, 169, 0.644);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="form-style-5">
+                <form action="/save_edit" method="post">
+                    <fieldset>
+                        <div class="add-edit">
+                            <legend>Edit Your Package</legend>
+                            <label>Name</label>
+                            <input type="text" id="name" name="name" value="<%= user.name%>" />
+                            <br /><br />
+                            <label>Location</label>
+                            <input type="text" id="location" name="location" value="<%= user.location%>" />
+                            <br /><br />
+                            <label>Package-Name</label>
+                            <input type="text" id="package" name="package" value="<%= user.package%>" />
+                            <br /><br />
+                            <label>Type</label>
+                            <select id="type" name="type" value="<%= user.type%>">
+                                <option value="Gruop">Group</option>
+                                <option value="Couple">Couple</option>
+                                <option value="senior citizen">Senior Citizen</option>
+                                <option value="girls">Girls-Group</option>
+                                <option value="solo">Solo Traveler</option>
+                            </select>
+                            <br /><br />
+                            <label>Duration</label>
+                            <input type="text" id="duration" name="duration" value="<%= user.duration%>" />
+                            <br /><br />
+                            <label>Email</label>
+                            <input type="email" id="email" name="email" value="<%= user.email%>" />
+                            <br /><br />
+                            <label>Phone-No</label>
+                            <input type="text" id="phone" name="phone" value="<%= user.phone%>" />
+                            <br /><br />
+
+                            <input type="submit" value="Save" />
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

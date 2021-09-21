@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Final</title>
+        <style>
+            body {
+                background-color: rgb(211, 211, 211);
+            }
+            button {
+                width: 70px;
+                height: 5vh;
+                border: 1px solid;
+                margin-left: 250px;
+                background-color: grey;
+                color: black;
+            }
+            .final {
+                box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+                padding: 2mm;
+                margin: 0 auto;
+                width: 350px;
+                background: #fff;
+                margin-top: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                color: #666;
+            }
+            h2 {
+                text-align: center;
+                display: block;
+            }
+            .logo {
+                height: 60px;
+                width: 60px;
+                background: url(/images/Images/flight_2.jpg);
+                background-size: 60px 60px;
+                margin-left: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="final">
+            <div class="logo"></div>
+            <form action="/payment" method="POST">
+                <h2>Go Traveler</h2>
+                <div class="final-1">
+                    <p>Name:<%= user.name%></p>
+                    <br />
+                    <p>Location:<%= user.location %></p>
+                    <br />
+                    <p>Package:<%= user.package %></p>
+                    <br />
+                    <p>Type:<%= user.type %></p>
+                    <br />
+                    <p>Duration:<%= user.duration %></p>
+                    <br />
+                    <p>Email:<%= user.email %></p>
+                    <br />
+                    <p>Phone-No:<%= user.phone%></p>
+                    <br />
+
+                    <button>Print</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

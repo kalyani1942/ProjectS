@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Travel-webSite-Contact US</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css " />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+            .contact {
+                position: relative;
+                min-height: 100vh;
+                padding: 50px 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: dimgray;
+                background-size: cover;
+            }
+            .contact .content {
+                max-width: 800px;
+                text-align: center;
+            }
+            .contact .content h2 {
+                font-size: 36px;
+                font-weight: 500;
+                color: white;
+            }
+            .contact .content p {
+                font-weight: 300;
+                color: white;
+            }
+            .container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+            }
+            .container .contactInfo {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            .container .contactInfo .box {
+                position: relative;
+                padding: 20px 0;
+                display: flex;
+            }
+            .container .contactInfo .box .icon {
+                min-width: 60px;
+                height: 60px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                font-size: 22px;
+            }
+            .container .contactInfo .box .text {
+                display: flex;
+                margin-left: 20px;
+                font-size: 16px;
+                color: white;
+                flex-direction: column;
+                font-weight: 300;
+            }
+            .container .contactInfo .box .text h3 {
+                font-weight: 500;
+                color: #00bcd4;
+            }
+            .contactForm {
+                width: 40%;
+                padding: 40px;
+                background: #fff;
+            }
+            .contactForm h2 {
+                font-size: 30px;
+                color: #333;
+                font-weight: 500;
+            }
+            .contactForm .inputBox span {
+                position: absolute;
+                left: 0;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                pointer-events: none;
+                transition: 0.5s;
+                color: #666;
+            }
+            .contactForm .inputBox input:focus ~ span {
+                color: #e91e63;
+                font-size: 12px;
+                transform: translate(-20px);
+            }
+            .contactForm .inputbox {
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .contactForm .inputbox input,
+            .contactForm .inputBox textarea {
+                width: 100%;
+                padding: 5px 0;
+                font-size: 16px;
+                margin: 10px 0;
+                border: none;
+                border-bottom: 2px solid #333;
+                outline: none;
+                resize: none;
+            }
+            .nav {
+                float: left;
+                background-color: rgb(1, 13, 32);
+            }
+            .nav .navbar-nav .nav-item a {
+                color: white;
+            }
+            footer {
+                background: black;
+                color: white;
+                height: 15vh;
+                position: absolute;
+                left: 0;
+                right: 0;
+                font-family: "Open Sans";
+                padding-top: 10px;
+                color: white;
+            }
+            .footer-content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-content p {
+                max-width: 500px;
+                margin: 10px auto;
+                line-height: 28px;
+                font-size: 14px;
+            }
+            .socials {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0 3rem 0;
+            }
+            .socials li {
+                margin: 0 10px;
+            }
+            .socials a {
+                text-decoration: none;
+                color: white;
+            }
+            .socials a i {
+                font-size: 1.1rem;
+                transition: 4s ease;
+            }
+            .socials a:hover i {
+                color: aqua;
+            }
+            .footer-bottom {
+                background: black;
+                width: 150vw;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .footer-bottom p {
+                font-size: 14px;
+                word-spacing: 2px;
+                text-transform: capitalize;
+                text-align: center;
+            }
+            .footer-bottom span {
+                text-transform: uppercase;
+                opacity: 0.4;
+                font-weight: 200;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section">
+            <div class="contact">
+                <div class="content">
+                    <h2>Contact Us</h2>
+                    <p style="color: white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem distinctio dicta minus molestias quis nulla non omnis cum
+                        mollitia nihil sapiente, ratione reprehenderit voluptate animi ipsam deleniti hic? Laudantium, quisquam. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="contactInfo">
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-map-marker"></i></div>
+                            <div class="text">
+                                <h3>Address</h3>
+                                <p style="color: white">Plot No73,Eling Road</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Phone</h3>
+                                <p style="color: white">+44-2561458052</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div class="text">
+                                <h3>Email</h3>
+                                <p style="color: white">webtecno@ambersoft.com</p>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="contactForm">
+                        <form action="contactus" method="POST">
+                            <h2>Send Message</h2>
+                            <div class="inputbox">
+                                <input type="text" id="fname" name="fname" placeholder="FullName" />
+                            </div>
+                            <div class="inputbox">
+                                <input type="email" id="email" name="email" placeholder="Email" />
+                            </div>
+                            <div class="inputbox">
+                                <textarea required="required" placeholder="Type Your Message...." id="message" name="message"></textarea>
+                            </div>
+                            <div class="inputbox">
+                                <a href="/home"><input type="submit" value="Send" /></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <ul class="socials">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i> </a>
+                    </li>
+                </ul>
+                <div class="footer-bottom">
+                    <p>Copyright &copy;2021 AmberSoft Designed by <span>Team3</span></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
